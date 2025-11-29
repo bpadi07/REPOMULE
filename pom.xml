@@ -13,8 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.4.0-20230320</app.runtime>
-		<mule.maven.plugin.version>3.9.0</mule.maven.plugin.version>
+		<app.runtime>4.4.0</app.runtime>
+		<mule.maven.plugin.version>3.8.1</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -84,7 +84,15 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		
+		<pluginRepository>
+    <id>mule-ee-releases</id>
+    <name>MuleSoft EE Releases</name>
+    <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+</pluginRepository>
+		
 	</pluginRepositories>
+	
 	
 	<dependencies>
 		<dependency>
