@@ -1,4 +1,4 @@
-name: Publish to Exchange & Deploy to CH2.0
+name: Publish & Deploy
 
 on:
   push:
@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
-      - name: Set up JDK 1.8
+      - uses: actions/checkout@v4
+
+      - name: Setup JDK
         uses: actions/setup-java@v4
         with:
           distribution: zulu
@@ -21,14 +21,7 @@ jobs:
       - name: Build
         run: mvn clean install -DskipTests
 
-      - name: Publish to Exchange
-        run: |
-          mvn deploy --settings .maven/settings.xml -DskipMunitTests \
-          -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-          -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
-
-      - name: Deploy to CloudHub 2.0
-        run: |
-          mvn deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
-          -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-          -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
+      - name: Publish
+        run: mvn deploy -DmuleDeploy --settings .maven/settings.xml \
+             -Dclient.id=${{ secrets.CONNECTED_APP_CLIENT_ID }} \
+             -Dclient.secret=${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
