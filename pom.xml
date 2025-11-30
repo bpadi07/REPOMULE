@@ -8,7 +8,7 @@
 
     <artifactId>test</artifactId>
 
-    <version>2.2.13</version>
+    <version>2.2.14</version>
 
     <packaging>mule-application</packaging>
     
@@ -38,7 +38,7 @@
                         <uri>https://anypoint.mulesoft.com</uri>
                         <provider>MC</provider>
                         <environment>Sandbox</environment>
-                        <target>Cloudhub-US-East-2</target>
+                        <target>Cloudhub-US-East-1</target>
                         <server>Repository</server>
                         <applicationName>${project.artifactId}</applicationName>
                         <releaseChannel>NONE</releaseChannel>
