@@ -15,16 +15,14 @@
       <repositories>
         <repository>
           <id>anypoint-exchange</id>
-          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc
-/maven</url>
+          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc/maven</url>
         </repository>
       </repositories>
 
       <pluginRepositories>
         <pluginRepository>
           <id>anypoint-exchange</id>
-          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc
-/maven</url>
+          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc/maven</url>
         </pluginRepository>
       </pluginRepositories>
 
