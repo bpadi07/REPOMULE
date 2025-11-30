@@ -6,9 +6,9 @@
     <groupId>836417fc-6653-4fdc-b9a3-658ec84e62dc</groupId>
 
 
-    <artifactId>test</artifactId>
+    <artifactId>HelloMULE</artifactId>
 
-    <version>2.2.14</version>
+    <version>2.2.16</version>
 
     <packaging>mule-application</packaging>
     
@@ -27,6 +27,12 @@
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.1.0</version>
             </plugin>
+            <plugin>
+                <groupId>org.mule.tools.maven</groupId>
+                <artifactId>exchange-mule-maven-plugin</artifactId>
+                <version>0.0.23</version>
+            </plugin>
+            
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
