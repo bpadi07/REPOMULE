@@ -3,10 +3,18 @@
   <servers>
     <server>
       <id>Repository</id>
-      <username>${client.id}</username>
-      <password>${client.secret}</password>
+      <username>erpankajbadi@gmail.com</username>
+      <password>Pankaj@2207</password>
     </server>
   </servers>
+
+  <mirrors>
+    <mirror>
+      <id>anypoint-exchange-v3</id>
+      <mirrorOf>*</mirrorOf>
+      <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+    </mirror>
+  </mirrors>
 
   <profiles>
     <profile>
@@ -14,14 +22,14 @@
 
       <repositories>
         <repository>
-          <id>anypoint-exchange</id>
+          <id>Repository</id>
           <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc/maven</url>
         </repository>
       </repositories>
 
       <pluginRepositories>
         <pluginRepository>
-          <id>anypoint-exchange</id>
+          <id>Repository</id>
           <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc/maven</url>
         </pluginRepository>
       </pluginRepositories>
