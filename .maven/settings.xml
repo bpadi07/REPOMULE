@@ -1,16 +1,36 @@
-<?xml version="1.0"?>
-<settings>
-
-  <pluginGroups>
-    <pluginGroup>org.mule.tools</pluginGroup>
-  </pluginGroups>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
 
   <servers>
     <server>
       <id>Repository</id>
-      <username>~~~Client~~~</username>
-      <password>${client.id}~?~${client.secret}</password>
+      <username>${client.id}</username>
+      <password>${client.secret}</password>
     </server>
   </servers>
+
+  <profiles>
+    <profile>
+      <id>mule</id>
+
+      <repositories>
+        <repository>
+          <id>anypoint-exchange</id>
+          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/ORG_ID/maven</url>
+        </repository>
+      </repositories>
+
+      <pluginRepositories>
+        <pluginRepository>
+          <id>anypoint-exchange</id>
+          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/ORG_ID/maven</url>
+        </pluginRepository>
+      </pluginRepositories>
+
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>mule</activeProfile>
+  </activeProfiles>
 
 </settings>
