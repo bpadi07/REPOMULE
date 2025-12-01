@@ -42,6 +42,9 @@
                         <deploymentSettings>
                             <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
                         </deploymentSettings>
+                          
+                <redeploy>true</redeploy>
+           
                     </cloudhub2Deployment>
                 </configuration>
             </plugin>
