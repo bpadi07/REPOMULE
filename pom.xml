@@ -4,7 +4,7 @@
     
     <groupId>836417fc-6653-4fdc-b9a3-658ec84e62dc</groupId>
     <artifactId>hello</artifactId>
-    <version>2.10.18</version>
+    <version>2.10.19</version>
     <packaging>mule-application</packaging>
     
     <name>test</name>
@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mule.maven.plugin.version>4.6.0</mule.maven.plugin.version>
+        <mule.maven.plugin.version>4.10.1</mule.maven.plugin.version>
     </properties>
     
     <build>
@@ -36,7 +36,7 @@
                         <target>Cloudhub-US-East-2</target>
                         <server>Repository</server>
                         <applicationName>${project.artifactId}</applicationName>
-                        <releaseChannel>NONE</releaseChannel>
+                        <releaseChannel>Edge</releaseChannel>
                         <replicas>1</replicas>
                         <vCores>0.1</vCores>
                         <deploymentSettings>
