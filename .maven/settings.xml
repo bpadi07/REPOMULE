@@ -1,44 +1,16 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+<?xml version="1.0"?>
+<settings>
+
+  <pluginGroups>
+    <pluginGroup>org.mule.tools</pluginGroup>
+  </pluginGroups>
 
   <servers>
     <server>
       <id>Repository</id>
-      <username>erpankajbadi@gmail.com</username>
-      <password>Pankaj@2207</password>
+      <username>~~~Client~~~</username>
+      <password>${client.id}~?~${client.secret}</password>
     </server>
   </servers>
-
-  <mirrors>
-    <mirror>
-      <id>anypoint-exchange-v3</id>
-      <mirrorOf>*</mirrorOf>
-      <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
-    </mirror>
-  </mirrors>
-
-  <profiles>
-    <profile>
-      <id>mule</id>
-
-      <repositories>
-        <repository>
-          <id>Repository</id>
-          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc/maven</url>
-        </repository>
-      </repositories>
-
-      <pluginRepositories>
-        <pluginRepository>
-          <id>Repository</id>
-          <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/836417fc-6653-4fdc-b9a3-658ec84e62dc/maven</url>
-        </pluginRepository>
-      </pluginRepositories>
-
-    </profile>
-  </profiles>
-
-  <activeProfiles>
-    <activeProfile>mule</activeProfile>
-  </activeProfiles>
 
 </settings>
